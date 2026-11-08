@@ -545,7 +545,9 @@ p { margin: 0 0 1em; }
   .contact__map, .contact__map iframe { min-height: 340px; }
 
   .fab {
-    display: inline-flex; position: fixed; z-index: 40; right: 16px; bottom: 16px;
+    display: inline-flex; position: fixed; z-index: 40; right: 16px;
+    /* acima do selo "Powered by Netlify" (fixo no canto inferior direito) */
+    bottom: calc(84px + env(safe-area-inset-bottom, 0px));
     opacity: 0; pointer-events: none; transform: translateY(20px); transition: opacity .3s, transform .3s;
   }
   .fab.is-shown { opacity: 1; pointer-events: auto; transform: none; }
